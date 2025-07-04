@@ -53,7 +53,7 @@ const JobDetail = ({ job: jobProp }: { job?: Job }) => {
                 <div>
                     <button
                         onClick={() => alert('Apply clicked!')}
-                        className="mt-2 bg-emerald-100 text-black px-2 py-2 rounded"
+                        className="mt-2 bg-emerald-100 text-black px-2 py-2 font-medium w-35 rounded-full"
                     >
                         Apply Now
                     </button>
