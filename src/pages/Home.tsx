@@ -116,13 +116,17 @@ const Home = () => {
         enabled: !!selectedJobId,
     });
 
+
     const filteredJobs = jobs?.filter((job: any) => {
-        const companyMatch =
-            selectedCompanies.length === 0 || selectedCompanies.includes(job.company);
-        const locationMatch =
-            selectedLocations.length === 0 || selectedLocations.includes(job.location);
-        return companyMatch || locationMatch;
+        const matchCompany = selectedCompanies.includes(job.company);
+        const matchLocation = selectedLocations.includes(job.location);
+
+        if (selectedCompanies.length === 0 && selectedLocations.length === 0) {
+            return true;
+        }
+        return matchCompany || matchLocation;
     });
+
 
     const handleLogout = () => {
         localStorage.removeItem('token');
