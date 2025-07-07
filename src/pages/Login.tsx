@@ -275,7 +275,7 @@ const Login: React.FC = () => {
                                 placeholder="Username"
                             /> */}
                             <input
-                                className="bg-transparent w-[300px] border border-gray-300 rounded px-3 py-1"
+                                className="bg-transparent w-[300px] border border-gray-300 rounded px-3 py-1 text-amber-50"
                                 value={username}
                                 onChange={(e) => setUsername(e.target.value)}
                                 placeholder="Username"
@@ -284,7 +284,7 @@ const Login: React.FC = () => {
                         </Form.Item>
                         <Form.Item validateStatus={formErrors.password ? 'error' : ''} help={formErrors.password}>
                             <input
-                                className="bg-transparent w-[300px] border border-gray-300 rounded px-3 py-1"
+                                className="bg-transparent w-[300px] border border-gray-300 rounded px-3 py-1 text-amber-50"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 placeholder="Password"
@@ -318,7 +318,7 @@ const Login: React.FC = () => {
                         <h2 className="text-3xl font-bold text-white">Register Account</h2>
                         <Form.Item validateStatus={formErrors.name ? 'error' : ''} help={formErrors.name}>
                             <input
-                                className="bg-transparent w-[300px] border border-gray-300 rounded px-3 py-1"
+                                className="bg-transparent w-[300px] border border-gray-300 rounded px-3 py-1 text-amber-50"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
                                 placeholder="Name"
@@ -326,7 +326,7 @@ const Login: React.FC = () => {
                         </Form.Item>
                         <Form.Item validateStatus={formErrors.username ? 'error' : ''} help={formErrors.username}>
                             <input
-                                className="bg-transparent w-[300px] border border-gray-300 rounded px-3 py-1"
+                                className="bg-transparent w-[300px] border border-gray-300 rounded px-3 py-1 text-amber-50"
                                 value={username}
                                 onChange={(e) => setUsername(e.target.value)}
                                 placeholder="Username"
@@ -334,7 +334,7 @@ const Login: React.FC = () => {
                         </Form.Item>
                         <Form.Item validateStatus={formErrors.password ? 'error' : ''} help={formErrors.password}>
                             <input
-                                className="bg-transparent w-[300px] border border-gray-300 rounded px-3 py-1"
+                                className="bg-transparent w-[300px] border border-gray-300 rounded px-3 py-1 text-amber-50"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 placeholder="Password"

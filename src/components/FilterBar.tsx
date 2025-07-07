@@ -1,101 +1,3 @@
-// import { useEffect, useState } from "react";
-// import { fetchJobs } from "../api/jobApis";
-// import { Select } from "antd";
-
-// interface FilterBarProps {
-//     selectedCompany: string;
-//     onSelectCompany: (company: string) => void;
-
-//     selectedLocation: string
-//     onSelectLocation: (location: string) => void;
-// }
-
-// const FilterBar: React.FC<FilterBarProps> = ({ selectedCompany, onSelectCompany, selectedLocation, onSelectLocation }) => {
-//     const [companies, setCompanies] = useState<any[]>([]);
-//     const [location, setLocation] = useState<any[]>([]);
-
-//     useEffect(() => {
-//         const fetchedData = async () => {
-//             try {
-//                 const res = await fetchJobs();
-//                 const uniqueCompanies = Array.from(new Set(res.map((job: any) => job.company)));
-//                 const uniqueLocations = Array.from(new Set(res.map((joe: any) => joe.location)))
-//                 console.log('uniqueCompanies', uniqueCompanies)
-//                 setCompanies(uniqueCompanies);
-//                 setLocation(uniqueLocations)
-//             } catch (err) {
-//                 console.error("Failed to fetch jobs", err);
-//             }
-//         };
-
-//         fetchedData();
-//     }, []);
-
-//     return (
-//         <div className="mb-4">
-//             <label htmlFor="companyFilter" className="ml-10 font-medium">
-//                 Filter by Company:
-//             </label>
-//             <Select
-//                 id="companyFilter"
-//                 value={selectedCompany}
-//                 showSearch
-//                 allowClear
-//                 onChange={(value) => onSelectCompany(value)}
-
-//                 className="p-2 w-50 border rounded"
-//             >
-//                 <Select.Option value="">All Companies</Select.Option>
-//                 {companies.map((company) => (
-//                     <Select.Option key={company} value={company}>
-//                         {company}
-//                     </Select.Option>
-//                 ))}
-//             </Select>
-
-
-
-//             <Select
-//                 id="locationFilter"
-//                 value={selectedLocation}
-//                 showSearch
-//                 allowClear
-//                 onChange={(value) => onSelectLocation(value)}
-
-//                 className="p-2 w-50 border rounded"
-//             >
-//                 <Select.Option value="">All Companies</Select.Option>
-//                 {location.map((loc) => (
-//                     <Select.Option key={loc} value={loc}>
-//                         {loc}
-//                     </Select.Option>
-//                 ))}
-//             </Select>
-//         </div>
-//     );
-// };
-
-// export default FilterBar;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import { useEffect, useState } from "react";
 import { fetchJobs } from "../api/jobApis";
 import { Button, Col, Modal, Row, Select } from "antd";
@@ -174,6 +76,7 @@ const FilterBar: React.FC<FilterBarProps> = ({ onSelectCompany, onSelectLocation
                                     showSearch
                                     className="w-full"
                                     placeholder="Select a company"
+                                    maxTagCount='responsive'
                                 >
                                     {companies.map((company) => (
                                         <Select.Option key={company} value={company}>
