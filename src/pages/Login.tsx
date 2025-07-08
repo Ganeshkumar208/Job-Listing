@@ -129,7 +129,7 @@ import loginBackground from '../assets/loginBackground.jpg';
 
 // Define Zod schemas
 const loginSchema = z.object({
-    username: z.number().min(1, 'Username is required'),
+    username: z.string().min(1, 'Username is required'),
     password: z.string().min(1, 'Password is required')
 });
 
@@ -179,7 +179,7 @@ const Login: React.FC = () => {
                 setMessage('');
                 setStatus('');
                 navigate('/home');
-            }, 1000);
+            }, 500);
         } catch (error) {
             setStatus('error');
             setMessage('Credentials are wrong');
